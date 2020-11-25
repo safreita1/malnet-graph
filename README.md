@@ -1,6 +1,12 @@
 # A Large-Scale Database for Graph Representation Learning
 
-### What’s holding graph representation learning back?
+### How do we download and explore MalNet?
+We have designed and developed **[MalNet Explorer](www.mal-net.org/explore)**, an interactive graph exploration and 
+visualization tool to help people easily explore the data before downloading.
+Figure 3 shows MalNet Explorer’s desktop web interface and its main components. 
+MalNet Explorer and the data is available online at: www.mal-net.org.
+
+### MalNet: Advancing State-of-the-art Graph Databases
 Recent research focusing on developing graph kernels, neural networks and spectral methods 
 to capture graph topology has revealed a number of shortcomings of existing graph benchmark datasets, 
 which often contain graphs that are relatively:
@@ -9,7 +15,6 @@ which often contain graphs that are relatively:
 - **small in scale** in terms of nodes and edges, and
 - **restricted in class diversity**.
 
-### MalNet: Advancing State-of-the-art Graph Databases
 
 To solve these issues, we have been working to develop the worlds largest public graph representation 
 learning database to date at Georgia Tech’s [Polo Club of Data Science](https://poloclub.github.io/).
@@ -31,12 +36,9 @@ the [Euphony](https://github.com/fmind/euphony) classification structure.
 
 ![Function call graph](images/fcg.png)
 
-### How do we download and explore MalNet?
-We have designed and developed **[MalNet Explorer](www.mal-net.org/explore)**, an interactive graph exploration and 
-visualization tool to help people easily explore the data before downloading.
-Figure 3 shows MalNet Explorer’s desktop web interface and its main components. 
-MalNet Explorer and the data is available online at: www.mal-net.org.
 
 ### How to run the code?
 The experiments we conducted in the [arXiv paper](https://arxiv.org/abs/2011.07682) can be run using dm_experiments.py.
+
+
 
