@@ -1,10 +1,5 @@
 # A Large-Scale Database for Graph Representation Learning
 
-### How do we download and explore MalNet?
-We have designed and developed **[MalNet Explorer](www.mal-net.org/explore)**, an interactive graph exploration and 
-visualization tool to help people easily explore the data before downloading.
-Figure 3 shows MalNet Explorer’s desktop web interface and its main components. 
-MalNet Explorer and the data is available online at: www.mal-net.org.
 
 ### MalNet: Advancing State-of-the-art Graph Databases
 Recent research focusing on developing graph kernels, neural networks and spectral methods 
@@ -25,6 +20,7 @@ Compared to the popular REDDIT-12K database, MalNet offers 105x more graphs, 44x
 
 ![Comparing Graph Databases](images/malnet-graph-comparison.png)
 
+
 ### What is a function call graph (FCG)?
 
 Function call graphs represent the control flow of programs (see Figure 2 below), and can be statically extracted from 
@@ -35,6 +31,15 @@ specifically selecting APKs containing both a family and type label obtained fro
 the [Euphony](https://github.com/fmind/euphony) classification structure.
 
 ![Function call graph](images/fcg.png)
+
+
+### How do we download and explore MalNet?
+We have designed and developed **[MalNet Explorer](www.mal-net.org/explore)**, an interactive graph exploration and 
+visualization tool to help people easily explore the data before downloading.
+Figure 3 shows MalNet Explorer’s desktop web interface and its main components. 
+MalNet Explorer and the data is available online at: www.mal-net.org.
+
+![Comparing Graph Databases](images/malnet-explorer.png)
 
 
 ### How to run the code?
