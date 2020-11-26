@@ -13,7 +13,7 @@ which often contain graphs that are relatively:
 
 To solve these issues, we have been working to develop the worlds largest public graph representation 
 learning database to date at Georgia Tech’s [Polo Club of Data Science](https://poloclub.github.io/).
-We release [MalNet](www.mal-net.org), which contains over **1.2 million function call graphs**
+We release **[MalNet](https://www.mal-net.org)**, which contains over **1.2 million function call graphs**
 averaging over **17k nodes** and **39k edges per graph**, across a hierarchy of 47 types and 696 families of classes (see Figure 1 below). 
 
 Compared to the popular REDDIT-12K database, MalNet offers 105x more graphs, 44x larger graphs on average, and 63x more classes.
@@ -34,7 +34,7 @@ the [Euphony](https://github.com/fmind/euphony) classification structure.
 
 
 ### How do we download and explore MalNet?
-We have designed and developed [MalNet Explorer](www.mal-net.org/explore), an interactive graph exploration and 
+We have designed and developed **[MalNet Explorer](https://www.mal-net.org/explore)**, an interactive graph exploration and 
 visualization tool to help people easily explore the data before downloading.
 Figure 3 shows MalNet Explorer’s desktop web interface and its main components. 
 MalNet Explorer and the data is available online at: www.mal-net.org.
