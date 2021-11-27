@@ -1,5 +1,5 @@
 # A Large-Scale Database for Graph Representation Learning
-
+Accepted for an oral presentation in the NeurIPS 2021 Datasets and Benchmarks Track
 
 ### MalNet: Advancing State-of-the-art Graph Databases
 Recent research focusing on developing graph kernels, neural networks and spectral methods 
@@ -43,7 +43,13 @@ MalNet Explorer and the data is available online at: www.mal-net.org.
 
 
 ### How to run the code?
-The experiments we conducted in the [arXiv paper](https://arxiv.org/abs/2011.07682) can be run using dm_experiments.py.
+The code is broken into 2 separate directories:
+ata mining experiments and (2) graph neural network experiments.
+The code for each technique can be run using 'dm_experiments.py' and 'gnn_experiments.py', respectively. 
+In addition, we aggregate the key parameters for each method into the respective 'config.py' files.
 
+Before running the code, download the data from www.mal-net.org and specify the directory to the 'full' and 'tiny' datasets
+in both the dm and gnn 'config.py' files using the parameter 'malnet_dir', and 'malnet_tiny_dir', respectively.
+In addition, download the split info controlling the train/val/test splits from www.mal-net.org and place it in this directory.
 
 

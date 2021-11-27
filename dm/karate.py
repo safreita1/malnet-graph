@@ -1,13 +1,23 @@
+import numpy as np
+
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from karateclub.utils.treefeatures import WeisfeilerLehmanHashing
-from karateclub.graph_embedding import GeoScattering, FeatherGraph, IGE, Graph2Vec, GL2Vec, NetLSD, FGSD, SF
+from karateclub.graph_embedding import GeoScattering, FeatherGraph, IGE, Graph2Vec, NetLSD, FGSD, SF, LDP
 
 # too slow: fgsd, ige, GeoScattering, netlsd, sf
 # too much space: g2v, gl2vec
 
 
-def feather(graph):
-    model = FeatherGraph()
+def ldp(graph):
+    model = LDP()
+    model._check_graphs([graph])
+
+    embedding = model._calculate_ldp(graph)
+    return embedding
+
+
+def feather(graph, order=5):
+    model = FeatherGraph(order=order)
     model._set_seed()
     model._check_graphs([graph])
 
@@ -43,8 +53,8 @@ def lsd(graph):
     return embedding
 
 
-def sf(graph):
-    model = SF()
+def sf(graph, n_eigenvalues=128):
+    model = SF(dimensions=n_eigenvalues)
     model._set_seed()
     model._check_graphs([graph])
 
@@ -52,8 +62,8 @@ def sf(graph):
     return embedding
 
 
-def geo_scattering(graph):
-    model = GeoScattering()
+def geo_scattering(graph, order=4):
+    model = GeoScattering(order=order)
     model._set_seed()
     model._check_graphs([graph])
 
@@ -61,7 +71,7 @@ def geo_scattering(graph):
     return embedding
 
 
-def g2v(idx, graph):
+def g2v_document(idx, graph):
     model = Graph2Vec()
     model._set_seed()
     model._check_graphs([graph])
@@ -71,8 +81,9 @@ def g2v(idx, graph):
     return document
 
 
-def g2v_embed(documents):
+def g2v(documents):
+    from tqdm import tqdm
     model = Doc2Vec(documents)
+    embedding = [model.docvecs[str(i)] for i, _ in enumerate(tqdm(documents))]
 
-    embedding = [model.docvecs[str(i)] for i, _ in enumerate(documents)]
-    return embedding
+    return np.array(embedding)
