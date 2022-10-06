@@ -53,3 +53,19 @@ in both the dm and gnn 'config.py' files using the parameter 'malnet_dir', and '
 In addition, download the split info controlling the train/val/test splits from www.mal-net.org and place it in this directory.
 
 
+### Create your own FCGs
+The code to extract function call graphs (FCGs) from Android APK files can be found in 'create_dataset.py'.
+To run the code we need to install some legacy versions of Androguard and Networkx.
+If you want to visualize the FCG, we also need to install a Linux library (otherwise, comment out the visualization code).
+
+1. Install the following packages
+   1. sudo apt install libcairo2-dev
+   2. pip install androguard (note: this installs the deprecated PyPi pacakge from 2019)
+   3. pip install networkx==2.3
+   4. pip install joblib
+   5. pip install tqdm
+   6. pip install pycairo
+   7. pip install igraph
+2. Create a folder in your working directory called "apk_files" and add your APK files.
+3. To analyze hundreds or thousands of APKs, set the number of cores to >1, up to the number of cores on your machine.
+4. Run the script
